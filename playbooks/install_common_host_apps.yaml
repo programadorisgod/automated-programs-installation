@@ -1,0 +1,8 @@
+- name: Install common host packages
+  hosts: local
+  gather_facts: false
+  become: true
+  roles:
+    - common
+
+- import_playbook: install_software_development_packages.yaml

@@ -1,0 +1,17 @@
+- name: Install fnm (Fast Node Manager)
+  ansible.builtin.shell: |
+    curl -fsSL https://fnm.vercel.app/install | bash
+  args:
+    executable: /bin/bash
+  become: true
+  environment:
+    HOME: "/home/{{ ansible_user }}"
+    USER: "{{ ansible_user }}"
+
+- name: Ensure fnm is initialized in .zshrc
+  ansible.builtin.blockinfile:
+    path: /home/{{ ansible_user }}/.zshrc
+    marker: "# {mark} ANSIBLE FNM CONFIGURATION"
+    block: |
+      eval "$(fnm env --use-on-cd --shell zsh)"
+  become: true

@@ -1,0 +1,6 @@
+- name: create alias for batcat
+  ansible.builtin.lineinfile:
+    path: /home/{{ ansible_user }}/.zshrc
+    line: alias bat='batcat'
+  ignore_errors: true
+  become: true

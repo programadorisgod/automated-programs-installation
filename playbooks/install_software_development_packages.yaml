@@ -1,0 +1,8 @@
+- name: "Install core packages"
+  hosts: local
+  gather_facts: false
+
+  roles:
+    - software_development_packages
+
+- import_playbook: install_programming_languages.yaml

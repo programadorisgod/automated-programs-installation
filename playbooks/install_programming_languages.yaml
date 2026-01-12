@@ -1,0 +1,6 @@
+- name: Install programming languages
+  hosts: local
+  gather_facts: false
+
+  roles:
+    - propramming_languages

@@ -1,0 +1,19 @@
+- name: Install common packages on host APT
+  ansible.builtin.apt:
+    name:
+      - git
+      - curl
+      - wget
+      - vim
+      - unzip
+      - unrar
+      - rar
+      - flameshot
+      - timeshift
+      - bat
+
+    state: present
+    update_cache: yes
+  become: true
+
+- import_tasks: create_alias.yaml

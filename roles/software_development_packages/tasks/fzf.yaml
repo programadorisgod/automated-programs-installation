@@ -1,0 +1,14 @@
+- name: install fzf
+  ansible.builtin.apt:
+    name: fzf
+    state: present
+    update_cache: yes
+  become: true
+
+- name: setup fzf in .zshrc
+  ansible.builtin.blockinfile:
+    path: /home/{{ ansible_user }}/.zshrc
+    marker: "# {mark} ANSIBLE FZF CONFIGURATION"
+    block: |
+      source /usr/share/doc/fzf/examples/key-bindings.zsh
+      source /usr/share/doc/fzf/examples/completion.zsh

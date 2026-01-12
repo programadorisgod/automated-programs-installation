@@ -1,0 +1,8 @@
+- import_tasks: zoxide.yaml
+- import_tasks: lazy-packages.yaml
+- import_tasks: fzf.yaml
+- import_tasks: fnm.yaml
+# falta uv para python
+# falta docker
+# falta editores, gestores de base de datos
+# falta postman
