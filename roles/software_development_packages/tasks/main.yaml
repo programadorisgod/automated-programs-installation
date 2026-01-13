@@ -5,3 +5,4 @@
 - import_tasks: uv.yaml
 - import_tasks: docker.yaml
 - import_tasks: open_code.yaml
+#faltante ZSH + plugins

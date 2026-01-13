@@ -2,6 +2,7 @@
 - import_tasks: fzf.yaml
 - import_tasks: fnm.yaml
 - import_tasks: docker.yaml
+- import_tasks: open_code.yaml
 # Faltantes
 #GH CLI, posible Azure cli
 #
