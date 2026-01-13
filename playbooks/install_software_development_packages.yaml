@@ -4,5 +4,6 @@
 
   roles:
     - software_development_packages
+    - software_development_packages/configuration
 
 - import_playbook: install_programming_languages.yaml
