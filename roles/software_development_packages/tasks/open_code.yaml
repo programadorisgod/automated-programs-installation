@@ -1,16 +1,9 @@
-- name: Ensure opencode install dir ownership
-  ansible.builtin.file:
-    path: "/home/{{ ansible_user }}/.opencode"
-    state: directory
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: "0755"
-
 - name: Install OPEN CODE CLI
   ansible.builtin.shell: |
     curl -fsSL https://opencode.ai/install | bash
   args:
     executable: /bin/bash
+    creates: "/home/{{ ansible_user }}/.opencode/bin/opencode"
   become: false
   ignore_errors: true
   environment:

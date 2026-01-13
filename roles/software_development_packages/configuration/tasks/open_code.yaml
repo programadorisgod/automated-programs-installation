@@ -1,5 +1,7 @@
-- name: Ensure opencode is in PATH (zsh)
+- name: Add opencode to PATH in zsh
   ansible.builtin.lineinfile:
     path: "/home/{{ ansible_user }}/.zshrc"
     line: 'export PATH="$HOME/.opencode/bin:$PATH"'
     create: true
+    state: present
+  become: false
