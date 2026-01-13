@@ -1,0 +1,8 @@
+- name: install api client tools
+  community.general.flatpak:
+    name:
+      - com.getpostman.Postman
+      - com.usebruno.Bruno
+      - rest.insomnia.Insomnia
+    state: present
+    method: user

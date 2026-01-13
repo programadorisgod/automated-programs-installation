@@ -1,0 +1,6 @@
+- name: Install developer tools
+  hosts: local
+  gather_facts: false
+
+  roles:
+    - developer_tools

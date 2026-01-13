@@ -1,0 +1,5 @@
+- name: Install DBveaber (database manager)
+  community.general.flatpak:
+    name: io.dbeaver.DBeaverCommunity
+    state: present
+    method: user
