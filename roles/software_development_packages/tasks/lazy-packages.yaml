@@ -2,4 +2,10 @@
   ansible.builtin.shell: |
     # Install lazydocker
     curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash || true
+  args:
+    executable: /bin/bash
+  environment:
+    HOME: "/home/{{ ansible_user }}"
+    USER: "{{ ansible_user }}"
+
   become: true
