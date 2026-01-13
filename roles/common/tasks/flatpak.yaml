@@ -1,0 +1,18 @@
+- name: install flatpak
+  ansible.builtin.apt:
+    name:
+      - flatpak
+      - gnome-software-plugin-flatpak
+    state: present
+    update_cache: yes
+  become: true
+
+- name: add flathub repository
+  ansible.builtin.shell: |
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  args:
+    executable: /bin/bash
+  environment:
+    HOME: "/home/{{ ansible_user }}"
+    USER: "{{ ansible_user }}"
+  become: true
