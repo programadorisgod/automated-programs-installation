@@ -17,3 +17,4 @@
   become: true
 
 - import_tasks: create_alias.yaml
+- import_tasks: flatpak.yaml
