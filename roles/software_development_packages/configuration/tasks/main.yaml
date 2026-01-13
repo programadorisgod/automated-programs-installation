@@ -1,0 +1,9 @@
+- import_tasks: zoxide.yaml
+- import_tasks: fzf.yaml
+- import_tasks: fnm.yaml
+- import_tasks: docker.yaml
+# Faltantes
+#GH CLI, posible Azure cli
+#
+
+### faltantes apps: todas las de flatpak que uso

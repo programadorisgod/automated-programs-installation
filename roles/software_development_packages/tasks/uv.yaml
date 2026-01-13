@@ -1,0 +1,9 @@
+- name: Install UV Package Manager
+  ansible.builtin.shell: |
+    curl -LsSf https://astral.sh/uv/install.sh | less
+  args:
+    executable: /bin/bash
+  become: true
+  environment:
+    HOME: "/home/{{ ansible_user }}"
+    USER: "{{ ansible_user }}"

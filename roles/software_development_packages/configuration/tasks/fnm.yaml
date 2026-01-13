@@ -1,0 +1,7 @@
+- name: Ensure fnm is initialized in .zshrc
+  ansible.builtin.blockinfile:
+    path: /home/{{ ansible_user }}/.zshrc
+    marker: "# {mark} ANSIBLE FNM CONFIGURATION"
+    block: |
+      eval "$(fnm env --use-on-cd --shell zsh)"
+  become: true
