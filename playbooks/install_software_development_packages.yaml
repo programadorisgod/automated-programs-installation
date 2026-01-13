@@ -1,4 +1,4 @@
-- name: "Install core packages"
+- name: Install core packages
   hosts: local
   gather_facts: false
 
