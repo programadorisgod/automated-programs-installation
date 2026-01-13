@@ -1,20 +1,10 @@
 - name: Install zoxide
   ansible.builtin.shell: |
     curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh || true
-  ignore_errors: true
-  become: true
-
-- name: Ensure zoxide is in the PATH
-  ansible.builtin.lineinfile:
-    path: /home/{{ ansible_user }}/.zshrc
-    line: eval "$(zoxide init zsh)"
-  ignore_errors: true
-
-  become: true
-
-- name: create Alias to Zoxide as cd
-  ansible.builtin.lineinfile:
-    path: /home/{{ ansible_user }}/.zshrc
-    line: alias cd='z'
+  args:
+    executable: /bin/bash
+  environment:
+    HOME: "/home/{{ ansible_user }}"
+    USER: "{{ ansible_user }}"
   ignore_errors: true
   become: true
