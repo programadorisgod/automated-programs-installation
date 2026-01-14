@@ -1,0 +1,5 @@
+- name: Install local aliases
+  ansible.builtin.command:
+    cmd: go install github.com/peterldowns/localias/cmd/localias@latest
+    creates: /home/{{ ansible_user }}/go/bin/localias
+  become: true

@@ -1,0 +1,34 @@
+- name: install plugins
+  ansible.builtin.apt:
+    name:
+      - zsh-autosuggestions
+      - zsh-syntax-highlighting
+    update_cache: yes
+  become: true
+
+- name: install theme powerlevel10k
+  ansible.builtin.shell: |
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+  become: true
+
+- name: set theme powerlevel10k
+  ansible.builtin.lineinfile:
+    path: ~/.zshrc
+    regexp: "^ZSH_THEME="
+    line: 'ZSH_THEME="powerlevel10k/powerlevel10k"'
+    state: present
+  become: true
+
+- name: set plugins
+  ansible.builtin.lineinfile:
+    path: ~/.zshrc
+    regexp: "^plugins="
+    line: "plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker history)"
+    state: present
+  become: true
+
+- name: set zsh as default shell
+  ansible.builtin.shell: |
+    chsh -s $(which zsh)
+  become: true

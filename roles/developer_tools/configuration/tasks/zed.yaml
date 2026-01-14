@@ -1,0 +1,9 @@
+- name: Copy Zed Settings.json
+  ansible.builtin.copy:
+    src: settings_zed.json
+    dest: /home/{{ansible_user}}/.config/zed/settings.json
+    owner: "{{ansible_user}}"
+    group: "{{ansible_user}}"
+    mode: "0644"
+    force: false
+  become: true
