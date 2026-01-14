@@ -4,3 +4,4 @@
 
   roles:
     - developer_tools
+    - developer_tools/configuration

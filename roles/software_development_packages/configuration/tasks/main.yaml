@@ -3,8 +3,5 @@
 - import_tasks: fnm.yaml
 - import_tasks: docker.yaml
 - import_tasks: open_code.yaml
-# Faltantes
-#GH CLI, posible Azure cli
-#
-
+- import_tasks: zsh.yaml
 ### faltantes apps: todas las de flatpak que uso

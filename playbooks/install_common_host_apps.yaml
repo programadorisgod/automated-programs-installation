@@ -5,4 +5,4 @@
   roles:
     - common
 
-- import_playbook: install_software_development_packages.yaml
+- import_playbook: install_programming_languages.yaml

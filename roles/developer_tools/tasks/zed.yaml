@@ -3,6 +3,7 @@
     curl -f https://zed.dev/install.sh | sh
   args:
     executable: /bin/bash
+    creates: /home/{{ ansible_user }}/.local/zed.app/bin/zed
   become: true
   environment:
     HOME: "/home/{{ ansible_user }}"

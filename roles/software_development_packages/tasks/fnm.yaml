@@ -3,6 +3,7 @@
     curl -fsSL https://fnm.vercel.app/install | bash
   args:
     executable: /bin/bash
+    creates: /home/{{ ansible_user }}/.local/share/fnm/fnm
   become: true
   environment:
     HOME: "/home/{{ ansible_user }}"

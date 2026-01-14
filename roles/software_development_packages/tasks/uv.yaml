@@ -3,6 +3,7 @@
     curl -LsSf https://astral.sh/uv/install.sh | less
   args:
     executable: /bin/bash
+    creates: /home/{{ ansible_user }}/.local/bin/uv
   become: true
   environment:
     HOME: "/home/{{ ansible_user }}"
