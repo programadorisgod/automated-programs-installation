@@ -80,7 +80,7 @@ cd automated-programs-installation
 ansible-playbook playbooks/install_common_host_apps.yaml
 ```
 
-## 🎯 Available Playbooks
+##  Available Playbooks
 
 ### `install_common_host_apps.yaml`
 Installs essential operating system applications:
