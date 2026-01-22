@@ -47,7 +47,6 @@ automated-programs-installation/
 ├──  host_vars/                           # Host-specific variables
 ├──  .hosts                               # Ansible hosts inventory
 ├──  ansible.cfg                          # Ansible configuration
-└──  quickstart.sh                        # Quick start script
 ```
 
 ##  Quick Start
