@@ -3,6 +3,6 @@
   gather_facts: false
 
   roles:
-    - propramming_languages
+    - programming_languages
 
 - import_playbook: install_software_development_packages.yaml
