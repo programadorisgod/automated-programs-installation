@@ -1,0 +1,12 @@
+- name: Warp Terminal
+  block:
+    - name: Download Warp terminal Ubuntu (.deb)
+      ansible.builtin.get_url:
+        url: https://app.warp.dev/download?package=deb
+        dest: "/home/{{ansible_user}}/warp-terminal.deb"
+        mode: "0644"
+
+    - name: Install Warp terminal from .deb
+      ansible.builtin.apt:
+        deb: "/home/{{ansible_user}}/warp-terminal.deb"
+      become: true

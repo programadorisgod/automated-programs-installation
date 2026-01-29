@@ -1,0 +1,16 @@
+- name: Install and verify install
+  block:
+    - name: Install Podman
+      ansible.builtin.apt:
+        name: podman
+        state: present
+        update_cache: yes
+      become: true
+
+    - name: Verify podman Install
+      ansible.builtin.command: podman ps -a
+      register: podman_ps
+
+    - name: Show podman ps command
+      ansible.builtin.debug:
+        var: podman_ps

@@ -1,6 +1,0 @@
-- name: install go programming language
-  ansible.builtin.apt:
-    name: golang-go
-    state: present
-    update_cache: yes
-  become: true

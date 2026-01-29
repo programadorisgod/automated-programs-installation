@@ -1,6 +1,7 @@
 - name: install api client tools
   community.general.flatpak:
     name:
+      - es.danirod.Cartero
       - com.getpostman.Postman
       - com.usebruno.Bruno
       - rest.insomnia.Insomnia
