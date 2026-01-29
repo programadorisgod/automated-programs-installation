@@ -40,7 +40,7 @@ automated-programs-installation/
 ├──  roles/                               # Reusable Ansible roles
 │   ├── common/                             # Base system configurations
 │   ├── developer_tools/                    # IDEs and editors installation
-│   ├── propramming_languages/              # Language installation
+│   ├── programming_languages/              # Language installation
 │   └── software_development_packages/      # Packages and libraries
 │
 ├──  group_vars/                          # Variables by host groups
@@ -86,7 +86,7 @@ Installs essential operating system applications:
 - Web browsers (Firefox, Chrome)
 - Communication tools (Discord, Telegram, Slack)
 - Multimedia players (VLC, Spotify)
-- System utilities (htop, curl, wget, vim)
+- System utilities
 
 **Note:** This playbook automatically imports and runs all other playbooks, installing the complete development environment.
 
@@ -99,19 +99,14 @@ Sets up the development environment:
 
 ### `install_programming_languages.yaml`
 Installs languages and their ecosystems:
-- Python (with pip, virtualenv, pipenv)
 - Node.js (with npm, yarn, nvm)
-- Java (OpenJDK, Maven, Gradle)
-- Go, Rust, PHP, Ruby
-- Corresponding version managers
+- Go
 
 ### `install_software_development_packages.yaml`
 Installs specific development packages:
-- Docker and Docker Compose
-- Kubernetes tools (kubectl, helm)
-- Cloud tools (AWS CLI, Google Cloud SDK)
+- Docker, Docker Compose and Podman
 - Database tools (PostgreSQL, MySQL clients)
-- Monitoring tools (Prometheus, Grafana)
+
 
 ## Modular Installation
 
